@@ -1,6 +1,6 @@
 function timer() {
     // Timer 
-    const deadline = '2021-9-11';
+    const deadline = '2021-11-11';
 
     function getTimeRemaining(endtime) {
         const t = Date.parse(endtime) - new Date(), // milliseconds left untill today
