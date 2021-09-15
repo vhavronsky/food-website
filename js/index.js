@@ -1,3 +1,7 @@
+// npx json-server --watch db.json
+require('es6-promise').polyfill();
+import 'nodelist-foreach-polyfill';
+
 import tabs from './modules/tabs';
 import modal from './modules/modal';
 import timer from './modules/timer';
@@ -6,7 +10,6 @@ import calculator from './modules/calculator';
 import forms from './modules/forms';
 import slider from './modules/slider';
 import {openModal} from '.modules/modal';
-// npx json-server --watch db.json
 
 window.addEventListener('DOMContentLoaded', () => {
 
