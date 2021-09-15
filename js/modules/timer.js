@@ -1,7 +1,5 @@
-function timer() {
+function timer(id, deadline) {
     // Timer 
-    const deadline = '2021-11-11';
-
     function getTimeRemaining(endtime) {
         const t = Date.parse(endtime) - new Date(), // milliseconds left untill today
               days = Math.floor(t / (1000 * 60 * 60 * 24)),
@@ -50,7 +48,7 @@ function timer() {
         }
     }
 
-    setClock('.timer', deadline)
+    setClock(id, deadline)
 }
 
 export default timer;
