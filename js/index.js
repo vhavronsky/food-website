@@ -1,14 +1,13 @@
-// 'use strict';
+import tabs from './modules/tabs';
+import modal from './modules/modal';
+import timer from './modules/timer';
+import cards from './modules/cards';
+import calculator from './modules/calculator';
+import forms from './modules/forms';
+import slider from './modules/slider';
+// npx json-server --watch db.json
 
 window.addEventListener('DOMContentLoaded', () => {
-    // npx json-server --watch db.json
-    const tabs = require('./modules/tabs'),
-          modal = require('./modules/modal'),
-          timer = require('./modules/timer'),
-          cards = require('./modules/cards'),
-          calculator = require('./modules/calculator'),
-          forms = require('./modules/forms'),
-          slider = require('./modules/slider');
 
     tabs();
     modal();
