@@ -22,6 +22,7 @@ you must install _webpack_
 and use this:
 
 ```
+  npm install
   npx json-server --watch db.json
   npx webpack
 ```
