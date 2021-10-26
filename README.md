@@ -7,3 +7,14 @@ Technologies used: • AJAX • JSON • Fetch API • Promise • localStorage 
 There are such features as a calories calculator, timer, slider, modal window and more!
 
 *** 
+
+**To run the applicaton:**
+
+you must install _webpack_
+
+and use this:
+
+```
+  npx json-server --watch db.json
+  npx webpack
+```
