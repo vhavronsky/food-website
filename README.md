@@ -10,6 +10,13 @@ There are such features as a calories calculator, timer, slider, modal window an
 
 **To run the applicaton:**
 
+clone repository:
+
+```
+  git clone git@github.com:vhavronsky/food-website.git
+  cd food-website
+```
+
 you must install _webpack_
 
 and use this:
