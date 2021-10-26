@@ -1,6 +1,6 @@
 # Food Website
 
-#### This is one of my first projects on JavaScript
+#### This is one of my first JavaScript projects
 
 Technologies used: • AJAX • JSON • Fetch API • Promise • localStorage • Webpack • Babel
 
