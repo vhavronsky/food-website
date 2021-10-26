@@ -1,38 +1,39 @@
-function openModal(modalSelector, modalTimerId) {
-    const modalWindow = document.querySelector(modalSelector);
-    modalWindow.classList.add('show'); 
-    modalWindow.classList.remove('hide');
-    document.body.style.overflow = 'hidden';
-
-    console.log(modalTimerId);
-    if (modalTimerId)
-        clearInterval(modalTimerId); // if user has already opened the modal, then don't show it by TimeOut
-}
 function closeModal(modalSelector) {
-    const modalWindow = document.querySelector(modalSelector);
-    modalWindow.classList.remove('show'); 
-    modalWindow.classList.add('hide');
+    const modal = document.querySelector(modalSelector);
+
+    modal.classList.add('hide');
+    modal.classList.remove('show');
     document.body.style.overflow = '';
 }
 
+function openModal(modalSelector, modalTimerId) {
+    const modal = document.querySelector(modalSelector);
+
+    modal.classList.add('show');
+    modal.classList.remove('hide');
+    document.body.style.overflow = 'hidden';
+
+    if (modalTimerId) {
+        clearInterval(modalTimerId);
+    }
+}
 
 function modal(triggerSelector, modalSelector, modalTimerId) {
-    // Modal window
     const modalTrigger = document.querySelectorAll(triggerSelector),
-    modalWindow = document.querySelector(modalSelector);
+        modal = document.querySelector(modalSelector);
 
     modalTrigger.forEach(btn => {
         btn.addEventListener('click', () => openModal(modalSelector, modalTimerId));
     });
 
-    modalWindow.addEventListener('click', (event) => {
-        if (event.target === modalWindow || event.target.getAttribute('data-close') == '') {    
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal || e.target.getAttribute('data-close') == "") {
             closeModal(modalSelector);
         }
     });
 
-    document.addEventListener('keydown', (event) => {
-        if (event.code === 'Escape' && modalWindow.classList.contains('show')) {
+    document.addEventListener('keydown', (e) => {
+        if (e.code === "Escape" && modal.classList.contains('show')) { 
             closeModal(modalSelector);
         }
     });
@@ -47,5 +48,5 @@ function modal(triggerSelector, modalSelector, modalTimerId) {
 }
 
 export default modal;
-export {openModal};
 export {closeModal};
+export {openModal};
